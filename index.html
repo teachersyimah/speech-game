@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Pronunciation Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Header Info -->
+        <div class="header-ui">
+            <div id="level-indicator">Level: 1 / 10</div>
+            <div id="score-board">Score: <span id="score">0</span></div>
+        </div>
+
+        <!-- Progress Bar Wrapper -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <!-- Game Screen Stage -->
+        <div class="game-stage">
+            <div class="sky">
+                <div class="cloud c1"></div>
+                <div class="cloud c2"></div>
+            </div>
+            <div class="city-skyline"></div>
+            <div class="road">
+                <div class="road-lines"></div>
+                <div id="obstacle" class="obstacle-stopped">🚧</div>
+                <div id="car" class="car-driving">🚗</div>
+            </div>
+        </div>
+
+        <!-- Gameplay Board -->
+        <div class="ui-board">
+            <div id="sentence-display">Get ready to read...</div>
+            <div id="feedback-msg">Press the microphone button and read the sentence clearly.</div>
+            
+            <!-- Controls Area -->
+            <div class="controls">
+                <button id="mic-btn" class="btn btn-primary">🎤 Tap to Speak</button>
+                <button id="retry-btn" class="btn btn-danger hidden">🔄 Retry</button>
+                <button id="next-btn" class="btn btn-success hidden">Next Level ➡️</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Game Modal Overlay -->
+    <div id="game-over-screen" class="overlay hidden">
+        <div class="modal">
+            <h2>🎉 Game Complete! 🎉</h2>
+            <p>Fantastic job! You navigated the entire city!</p>
+            <h3 id="final-score">Final Score: 100</h3>
+            <button onclick="location.reload()" class="btn btn-success">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
